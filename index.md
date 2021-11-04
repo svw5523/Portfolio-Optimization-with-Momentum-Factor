@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+# Augmented Factor Investing with Reinforcement Learning
 
-You can use the [editor on GitHub](https://github.com/svw5523/Portfolio-Optimization-with-Momentum-Factor/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Portfolio optimization has been a main concern in financial industry for a long time and nowadays, there are many popular theories can be applied to perform portfolio optimization. In this project, our team combined the augmented fundamentals factors such as momentum with both the Markowitz framework and reinforcement learning to perform portfolio optimization on selected stocks. We also compared the performance of these methods by backtesting in year 2019 based on different measures, such as, annualized Sharpe ratio, maximum drawdown etc.
 
-### Markdown
+### Data and training period
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Our team selected the following 20 large capitalization stocks from the Standard & Poor 500 index with respect to their market capitalization and obtained their stock price information from Yahoo! Finance [linked here](https://finance.yahoo.com/).
 
-```markdown
-Syntax highlighted code block
+| Ticker |	Company Name |	Ticker |	Company Name |
+| ------- | --------- | ------- | ------------------ |
+| AAPL |	Apple Inc. |	CMCSA |	Comcast Corporation Class A |
+| MSFT |	Microsoft Corporation |	XOM |	Exxon Mobil Corporation |
+| AMZN |	Amazon.com Inc. |	ADBE |	Adobe Inc. |
+| GOOG |	Alphabet Inc. Class C |	VZ |	Verizon Communications Inc. |
+| JNJ |	Johnson & Johnson |	INTC |	Intel Corporation |
+| UNH |	UnitedHealth Group Incorporated |	PFE |	Pizer Inc. |
+| V |	Visa Inc. Class A |	CSCO |	Cisco Systems Inc. |
+| NVDA |	NVIDIA Corporation |	NFLX |	Netix Inc. |
+| PG |	Procter & Gamble Company |	KO |	Coca-Cola Company |
+| MA |	Mastercard Incorporated Class A |	T |	AT&T Inc. |
 
-# Header 1
-## Header 2
-### Header 3
+The portfolio optimization was performed from 2011 to 2019 to avoid the pandemic influence in 2020.
 
-- Bulleted
-- List
+The company's quarter fundamental data can be acquired from SimFin [linked here](https://simfin.com/data/bulk).
 
-1. Numbered
-2. List
+### Conclusion
 
-**Bold** and _Italic_ and `Code` text
+The result is quite clear that the optimal portfolio selected by reinforcement learning outperforms that from the traditional Markowitz framework. Backtested the optimized portfolio in year 2019 with weights adjusted quarterly and record the daily return. Obtained the annualized return approximately as 28.22% and annualized Sharpe ratio as 1.94; the annualized volatility approximately as 13.28%.
 
-[Link](url) and ![Image](src)
-```
+For future work, this project can be extended to select optimal portfolios of the mid and small capitalization stocks. We also noticed that the optimization setup might be out-of-control during the pandemic in 2020, so the model sensitivity is another direction for improvement.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/svw5523/Portfolio-Optimization-with-Momentum-Factor/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Here, the Python code accounts for porfolio optimization with factor model and Markowitz optimization part (collabroated with Cornell student Rui Dai (rd576@cornell.edu)).
