@@ -6,7 +6,7 @@ Portfolio optimization has been a main concern in financial industry for a long 
 
 ### Data and training period
 
-Our team selected the following 20 large capitalization stocks from the Standard & Poor 500 index with respect to their market capitalization and obtained their stock price information from Yahoo! Finance [linked here](https://finance.yahoo.com/).
+Our team selected the following 20 large capitalization stocks from the Standard & Poor 500 index with respect to their market capitalization and obtained their stock price information from Yahoo! Finance [links here](https://finance.yahoo.com/).
 
 | Ticker |	Company Name |	Ticker |	Company Name |
 | ------- | --------- | ------- | ------------------ |
@@ -23,7 +23,7 @@ Our team selected the following 20 large capitalization stocks from the Standard
 
 The portfolio optimization was performed from 2011 to 2019 to avoid the pandemic influence in 2020.
 
-The company's quarter fundamental data can be acquired from SimFin [linked here](https://simfin.com/data/bulk).
+The company's quarter fundamental data can be acquired from SimFin [links here](https://simfin.com/data/bulk).
 
 ### Conclusion
 
